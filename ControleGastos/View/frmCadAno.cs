@@ -2,12 +2,6 @@
 using ControleGastos.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ControleGastos.View
@@ -19,6 +13,26 @@ namespace ControleGastos.View
         public frmCadAno()
         {
             InitializeComponent();
+            Listar();
+        }
+
+        private void Listar()
+        {
+            try
+            {
+                List<Anos> lista = new List<Anos>();
+                lista = new AnoModel().Listar();
+                //dg.AutoGenerateColumns = false;
+                dg.Columns[0].Visible = false;
+                dg.Columns[1].HeaderText = "Ano";
+                dg.DataSource = lista;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível listar os dados" + ex);
+            }
         }
 
         private void txtAno_TextChanged(object sender, EventArgs e)
@@ -68,7 +82,6 @@ namespace ControleGastos.View
                 MessageBox.Show("Não Inserido" + ex);
             }
            
-            
         }
     }
 }

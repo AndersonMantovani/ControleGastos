@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 117);
+            this.label1.Location = new System.Drawing.Point(12, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // txtAno
             // 
             this.txtAno.Enabled = false;
-            this.txtAno.Location = new System.Drawing.Point(60, 114);
+            this.txtAno.Location = new System.Drawing.Point(60, 91);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(116, 20);
             this.txtAno.TabIndex = 1;
